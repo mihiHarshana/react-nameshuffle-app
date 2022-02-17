@@ -1,8 +1,20 @@
 import React from "react";
-
 import Names from "./Names";
-import {Col, Row} from "react-bootstrap";
-const NamesListAdded = () => {
+import { Col, Row } from "react-bootstrap";
+
+type NamesListAddedProps = {
+  arr: string[]
+}
+const NamesListAdded: React.FC<NamesListAddedProps> = (props) => {
+  const listItems = () => {
+    return (
+      <ol>
+        {props.arr.map((name: string, index: number) =>
+          <Names name={name} index={index} key={index} />)
+        }
+      </ol>
+    );
+  }
   return (
     <React.Fragment>
       <Row>
@@ -10,9 +22,7 @@ const NamesListAdded = () => {
           Added Names
         </Col>
         <Col xs={12}>
-          <Names index={"1"} userName={"Awantha"}/>
-          <Names index={"2"} userName={"Mihi"}/>
-          <Names index={"3"} userName={"Vimu"}/>
+          {listItems()}
         </Col>
       </Row>
     </React.Fragment>

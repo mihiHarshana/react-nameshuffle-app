@@ -10,9 +10,9 @@ const NamesListShuffled = () => {
           Shuffled Names List
         </Col>
         <Col xs={12}>
-          <Names index={"1"} userName={"Awantha"}/>
-          <Names index={"2"} userName={"Mihi"}/>
-          <Names index={"3"} userName={"Vimu"}/>
+          <Names index={1} name={"Awantha"}/>
+          <Names index={1} name={"Mihi"}/>
+          <Names index={1} name={"Vimu"}/>
         </Col>
       </Row>
     </React.Fragment>

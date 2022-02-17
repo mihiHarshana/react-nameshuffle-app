@@ -3,8 +3,8 @@ import {Col, Row} from "react-bootstrap";
 import { Edit, Edit2, Trash2} from 'react-feather';
 
 type NamesProps = {
-  userName: String,
-  index: String
+  name: String,
+  index: number
 }
 
 
@@ -14,7 +14,7 @@ const Names :React.FC<NamesProps> = (props) => {
       <Row>
         <Col xs={8} >
           <h6>
-            {props.index} {props.userName}
+            {props.index+1} {props.name}
           </h6>
         </Col>
         <Col xs={4} >
